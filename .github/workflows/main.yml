@@ -24,8 +24,8 @@ jobs:
       - name: Build and push docker images to docker registry
         uses: docker/build-push-action@v1.1.0
         with:
-          username: robot$test
+          username: robot$bimaphr-ci
           password: ${{ secrets.HARBOR_T }}
-          repository: ibis/ibis_web
+          repository: bimaphr/frontend
           registry: pelabuhan.alterra.dev
           tags: ${{ github.sha }}
